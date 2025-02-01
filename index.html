@@ -19,11 +19,8 @@
       });
    })();
 </script>
-
-
-        <style>
-
-/* General styles */
+<style>
+    /* General Styles */
 body {
     background: linear-gradient(135deg, #0b0212, #180e2a);
     color: white;
@@ -35,8 +32,15 @@ body {
 
 /* About Section */
 #about-section {
-    padding: 100px 20px;
+    padding: 80px 20px;
     text-align: center;
+    background: linear-gradient(135deg, #2c003e, #1a0030);
+    border-radius: 20px;
+    max-width: 80%;
+    margin: auto;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     position: relative;
 }
 
@@ -65,118 +69,199 @@ body {
     position: absolute;
     top: 10%;
     left: 50%;
+    transform: translateX(-50%);
     width: 200px;
     height: 200px;
-    background: radial-gradient(circle, rgba(255,0,255,0.2), transparent);
+    background: radial-gradient(circle, rgba(255, 0, 255, 0.2), transparent);
     border-radius: 50%;
     filter: blur(100px);
     z-index: -1;
 }
 
-/* Glassmorphism Effect */
-#about-section {
-    background: linear-gradient(135deg, #2c003e, #1a0030); /* Gradient background */
-    color: white;
-
-    border-radius: 30px;
-    padding: 40px;
-    max-width: 90%;
-    margin: auto;
-    backdrop-filter: blur(20px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
-    z-index: 1;
-    align-items: center;
-    position: relative;
+/* Navbar */
+#navbar {
+    width: 100%;
+    background-color: purple;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 
+#nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
 
-            #navbar {
-            width: 100%;
-            background-color: purple;
-            padding: 10px 0;
-            text-align: right;
-            position: fixed;
-            display: flex;
-            justify-content: flex-end;
-            z-index: 10;
-            position: relative;
-        }
+#nav-list li {
+    padding: 0 20px;
+}
 
-        #nav-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            transition: color 0.3s ease;
-        }
+#nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
 
-        #nav-list li {
-            padding: 0 20px;
-        }
+#nav-list a:hover {
+    background-color: blue;
+    color: #FFC0CB;
+    transition: 0.3s ease;
+}
 
-        #nav-list a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 2.0em;
-            transition: color 0.3s ease;
-        }
-
-        #nav-list a:hover {
-            background-color: blue;
-            text-decoration: none;
-            color: #FFC0CB;
-            transition: color 0.3s ease;
-        }
-
-        .section {
-            padding: 0.5rem 2rem 1rem 2rem;
-        }
-
-        .section:hover {
-            background-color: #f5f5f5;
-            transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
-        }
-
-
-        img {
-    display: block;
+/* Image Styling */
+#about-section img {
+    max-width: 350px;
     height: auto;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin: 20px auto; /* Center the image and add spacing */
-    border: 0px;
-        }
-    #about-section img {
-    max-width: 400px; /* Make image smaller */
-    height: auto;
-    align: center;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-
-    margin-top: 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
 img:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    transform: scale(1.05);
 }
 
+/* Contact Form */
+.contact-form {
+    background: #2b2b2b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.contact-form button {
+    background: linear-gradient(90deg, #ff0080, #ff8c00);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-family: inherit;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(135deg, #0b0212, #180e2a);
+}
+
+/* LinkedIn Button */
+.linkedin-button {
+    background-color: #0077b5;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.linkedin-button i {
+    margin-right: 10px;
+}
+
+.linkedin-button:hover {
+    background-color: #005582;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about-section {
+        padding: 50px 10px;
+    }
+
+    #about-section h1 {
+        font-size: 2.2rem;
+    }
+
+    #about-section p {
+        font-size: 1rem;
+    }
+
+    #about-section img {
+        max-width: 280px;
+    }
+
+    #nav-list {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    #nav-list li {
+        padding: 5px 0;
+    }
+
+    #nav-list a {
+        font-size: 1.2em;
+    }
+}
+
+
+/* Header */
 .header {
     display: flex;
+    justify-content: space-between; /* Aligns items at both ends */
     align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
 }
 
+/* Name Styling (Left Side) */
 .name {
-    align-items: center;
-    margin-right: 550px; /* Adjust the spacing as needed */
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
 }
 
+/* LinkedIn Button (Right Side) */
 .linkedin-button {
-    background-color: #0077b5; /* LinkedIn blue */
+    background-color: #0077b5;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -184,120 +269,85 @@ img:hover {
     display: flex;
     align-items: center;
     transition: background-color 0.3s ease;
-    margin-right: 10px;
 }
 
 .linkedin-button i {
-    margin-right: 10px; /* Space between icon and text */
+    margin-right: 10px;
 }
 
 .linkedin-button:hover {
-    background-color: #005582; /* Darker LinkedIn blue for hover effect */
+    background-color: #005582;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
 }
 
 
-
-.contact-form {
-            background: #2b2b2b;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            width: 400px;
-            margin: auto; /* Center the form */
-            transition: none; /* Disable hover transition */
-        }
-        .contact-form h2 {
-            margin-bottom: 20px;
-        }
-
-        #contacts:hover {
-    background: #2b2b2b; /* Ensure background stays the same on hover */
-}
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-            font-family: inherit;
-        }
-
-        .contact-form button {
-            background: linear-gradient(90deg, #ff0080, #ff8c00);
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            font-family: inherit;
-        }
-        #contacts {
-    /* Your existing skills section styles */
-    background: #333; /* Example background color */
+/* Social Buttons Container */
+.social-buttons {
+    display: flex;
+    justify-content: center; /* Center align buttons */
+    gap: 15px; /* Space between buttons */
+     /* Add some space above */
 }
 
-#contacts:hover {
-    background: #333; /* Ensure background stays the same on hover */
+/* General Social Button Styling */
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    height: 40px; /* Fixed height for consistency */
+    line-height: 40px; /* Align text properly */
 }
-        .contact-form button:hover {
-            background: linear-gradient(135deg, #0b0212, #180e2a);
-        }
+
+/* Individual Button Colors */
+.github-button {
+    background-color: #333; /* GitHub black */
+    margin-top: 20px;
+}
+
+.facebook-button {
+    background-color: #1877F2; /* Facebook blue */
+    margin-top: 20px;
+}
+
+.linkedin-button {
+    background-color: #0077b5; /* LinkedIn blue */
+}
+
+/* Hover Effects */
+.social-button:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .social-buttons {
+        flex-direction: column; /* Stack buttons on smaller screens */
+        align-items: center;
+    }
+}
+
+
+</style>
 
 
 
-            @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            /* Adjustments for mobile screens */
-            #navbar {
-                flex-direction: column;
-                align-items: center;
-            }
-            #nav-list {
-                flex-direction: column;
-            }
-            #nav-list li {
-                padding: 10px 0;
-            }
-            .name {
-                margin-right: 0;
-                font-size: 1.5rem;
-            }
-            .linkedin-button {
-                margin-top: 10px;
-                font-size: 0.8rem;
-            }
-            #about-section h1 {
-                font-size: 2rem;
-            }
-            #about-section p {
-                font-size: 1rem;
-            }
-            img {
-                width: 80%;
-                max-width: none;
-            }
-            .contact-form {
-                width: 90%;
-            }
-        }
-
-            </style>
     </head>
     <body>
 
@@ -326,7 +376,9 @@ img:hover {
 
             <img src="1.png">
 
-                <p>
+                <p style="color: #D06FAC; font-weight: bold; font-style: italic;, sans-serif;">
+                    “Keep your eyes on the stars, and your feet on the ground.” ―Theodore Roosevelt </p>
+                    <p>
                     Hi, I’m Tekendra, a passionate Computer Engineering student at IOE Pulchowk Campus with a strong interest
                     in AI/ML, and web development. I love solving real-world problems through technology and continuously
                     expanding my knowledge in programming.
@@ -335,6 +387,8 @@ img:hover {
 
 
         </section>
+        <br>
+        <br>
 
 
         <section id="skills" class="section">
@@ -342,13 +396,25 @@ img:hover {
 
         <section id="contacts" class="section">
             <div class="contact-form">
-                <h2>Let's work together!</h2>
+                <h2>Contact Me</h2>
                 <form id="contact-form">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" placeholder="Your message" required></textarea>
                     <button type="submit" onclick="sendMail()">Send</button>
                 </form>
+
+                <div class="social-buttons">
+                    <a href="https://github.com/tekendrajoshi" class="social-button github-button" target="_blank">
+                        <i class="fab fa-github"></i>  GitHub
+                    </a>
+                    <a href="https://www.facebook.com/tekendra.joshi.184" class="social-button facebook-button" target="_blank">
+                        <i class="fab fa-facebook"></i>  Facebook
+                    </a>
+                    <a href="https://www.linkedin.com/in/tekendra-joshi" class="social-button linkedin-button" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
             </div>
         </section>
 
